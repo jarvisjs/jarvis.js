@@ -2,8 +2,8 @@ const vDOM = require('../src/vDOM')
 const chai = require('chai')
 
 
-describe('Testes referentes a função de criação do DOM virtual', () => {
-	it('Deve retornar um objeto que representa o DOM Virtual', () => {
+describe('The test will build a DOM representation', () => {
+	it('should return an object that represents the Virtual DOM', () => {
 		const result = vDOM(
 			'ul', 
 			{class: 'lista'}, 

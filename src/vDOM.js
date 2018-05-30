@@ -1,10 +1,11 @@
 /**
- * Representa uma função que monta o DOM
+ * Represent a function that build VDOM
  * @constructor
- * @param { string } type - Representa o tipo de elemento que está sendo criado. 
- * @param { object } props - Representa as propriedades que o elemento pode receber, por exemplo class ou ID. 
- * @param { array } children - Representa a criação dos elementos-filho, um exemplo é a <li> que é filho do elemento <ul>
+ * @param { string } type - Represent the element type that's been created.
+ * @param { object } props - Represent the properties that an element can receive, for exemple, class or ID. 
+ * @param { array } children - Represent the children's element that's been created, for exempla, an <li> is children of <ul> element
 */
+
 const vDOM = (type, props, ...children) => {
 	return {
 		type: type,
