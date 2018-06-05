@@ -1,9 +1,14 @@
 const createElement = (node) => {
-	if(node === 'string') { return document.createTextNode(node); }
+	if(typeof node === 'string') { return document.createTextNode(node); }
 
 	const $el = document.createElement(node.type);
-	node.children
-		.map(createElement)
-		.forEach($el.appendChild.bind($el));
-	return $el;
+	if(node.children){
+  node.children
+		.forEach((children) => {
+      $el.appendChild(createElement(children))
+    });
+  }
+  return $el;
 }
+
+module.exports = createElement
